@@ -1,30 +1,6 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Amplifier_Instrumentation:AD623BRZ
-#
-DEF Amplifier_Instrumentation:AD623BRZ U 0 5 Y Y 1 F N
-F0 "U" 140 290 50 H V C CNN
-F1 "Amplifier_Instrumentation:AD623BRZ" 260 210 50 H V C CNN
-F2 "" -100 0 50 H I C CNN
-F3 "" 450 -400 50 H I C CNN
-ALIAS AD623ARZ AD623BR AD623BRZ
-$FPLIST
- SOIC-8*
-$ENDFPLIST
-DRAW
-P 4 0 1 10 -200 300 -200 -300 400 0 -200 300 f
-X Rg 1 -300 100 100 R 50 50 1 1 P
-X - 2 -300 200 100 R 50 50 1 1 I
-X + 3 -300 -200 100 R 50 50 1 1 I
-X Vs- 4 0 -300 100 U 50 50 1 1 W
-X Ref 5 200 -300 200 U 50 50 1 1 P
-X ~ 6 500 0 100 L 50 50 1 1 O
-X Vs+ 7 0 300 100 D 50 50 1 1 W
-X Rg 8 -300 -100 100 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # Amplifier_Operational:LMC6484
 #
 DEF Amplifier_Operational:LMC6484 U 0 5 Y Y 5 L N
@@ -59,6 +35,89 @@ X - 13 -300 -100 100 R 50 50 4 1 I
 X ~ 14 300 0 100 L 50 50 4 1 O
 X V- 11 -100 -300 150 U 50 50 5 1 W
 X V+ 4 -100 300 150 D 50 50 5 1 W
+ENDDRAW
+ENDDEF
+#
+# Connector:Conn_01x14_Female
+#
+DEF Connector:Conn_01x14_Female J 0 40 Y N 1 F N
+F0 "J" 0 700 50 H V C CNN
+F1 "Connector:Conn_01x14_Female" 0 -800 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+A 0 -700 20 901 -901 1 1 6 N 0 -680 0 -720
+A 0 -600 20 901 -901 1 1 6 N 0 -580 0 -620
+A 0 -500 20 901 -901 1 1 6 N 0 -480 0 -520
+A 0 -400 20 901 -901 1 1 6 N 0 -380 0 -420
+A 0 -300 20 901 -901 1 1 6 N 0 -280 0 -320
+A 0 -200 20 901 -901 1 1 6 N 0 -180 0 -220
+A 0 -100 20 901 -901 1 1 6 N 0 -80 0 -120
+A 0 0 20 901 -901 1 1 6 N 0 20 0 -20
+A 0 100 20 901 -901 1 1 6 N 0 120 0 80
+A 0 200 20 901 -901 1 1 6 N 0 220 0 180
+A 0 300 20 901 -901 1 1 6 N 0 320 0 280
+A 0 400 20 901 -901 1 1 6 N 0 420 0 380
+A 0 500 20 901 -901 1 1 6 N 0 520 0 480
+A 0 600 20 901 -901 1 1 6 N 0 620 0 580
+P 2 1 1 6 -50 -700 -20 -700 N
+P 2 1 1 6 -50 -600 -20 -600 N
+P 2 1 1 6 -50 -500 -20 -500 N
+P 2 1 1 6 -50 -400 -20 -400 N
+P 2 1 1 6 -50 -300 -20 -300 N
+P 2 1 1 6 -50 -200 -20 -200 N
+P 2 1 1 6 -50 -100 -20 -100 N
+P 2 1 1 6 -50 0 -20 0 N
+P 2 1 1 6 -50 100 -20 100 N
+P 2 1 1 6 -50 200 -20 200 N
+P 2 1 1 6 -50 300 -20 300 N
+P 2 1 1 6 -50 400 -20 400 N
+P 2 1 1 6 -50 500 -20 500 N
+P 2 1 1 6 -50 600 -20 600 N
+X Pin_1 1 -200 600 150 R 50 50 1 1 P
+X Pin_10 10 -200 -300 150 R 50 50 1 1 P
+X Pin_11 11 -200 -400 150 R 50 50 1 1 P
+X Pin_12 12 -200 -500 150 R 50 50 1 1 P
+X Pin_13 13 -200 -600 150 R 50 50 1 1 P
+X Pin_14 14 -200 -700 150 R 50 50 1 1 P
+X Pin_2 2 -200 500 150 R 50 50 1 1 P
+X Pin_3 3 -200 400 150 R 50 50 1 1 P
+X Pin_4 4 -200 300 150 R 50 50 1 1 P
+X Pin_5 5 -200 200 150 R 50 50 1 1 P
+X Pin_6 6 -200 100 150 R 50 50 1 1 P
+X Pin_7 7 -200 0 150 R 50 50 1 1 P
+X Pin_8 8 -200 -100 150 R 50 50 1 1 P
+X Pin_9 9 -200 -200 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Connector_Generic:Conn_02x03_Odd_Even
+#
+DEF Connector_Generic:Conn_02x03_Odd_Even J 0 40 Y N 1 F N
+F0 "J" 50 200 50 H V C CNN
+F1 "Connector_Generic:Conn_02x03_Odd_Even" 50 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_2x??_*
+$ENDFPLIST
+DRAW
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 150 150 -150 1 1 10 f
+S 150 -95 100 -105 1 1 6 N
+S 150 5 100 -5 1 1 6 N
+S 150 105 100 95 1 1 6 N
+X Pin_1 1 -200 100 150 R 50 50 1 1 P
+X Pin_2 2 300 100 150 L 50 50 1 1 P
+X Pin_3 3 -200 0 150 R 50 50 1 1 P
+X Pin_4 4 300 0 150 L 50 50 1 1 P
+X Pin_5 5 -200 -100 150 R 50 50 1 1 P
+X Pin_6 6 300 -100 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -208,6 +267,31 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# formula:C_2.2uF
+#
+DEF formula:C_2.2uF C 0 10 N Y 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "formula:C_2.2uF" 25 -100 50 H V L CNN
+F2 "footprints:C_0603_1608Metric" 38 -150 50 H I C CNN
+F3 "http://www.yageo.com/documents/recent/UPY-GPHC_X5R_4V-to-50V_25.pdf" 25 100 50 H I C CNN
+F4 "DK" 0 0 60 H I C CNN "MFN"
+F5 "311-1451-1-ND" 0 0 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/product-detail/en/yageo/CC0603KRX5R6BB225/311-1451-1-ND/2833757" 425 500 60 H I C CNN "PurchasingLink"
+$FPLIST
+ C?
+ C_????_*
+ C_????
+ SMD*_c
+ Capacitor*
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 -30 80 -30 N
+P 2 0 1 20 -80 30 80 30 N
+X ~ 1 0 150 110 D 50 50 1 1 P
+X ~ 2 0 -150 110 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # formula:C_30pF
 #
 DEF formula:C_30pF C 0 10 N Y 1 F N
@@ -296,32 +380,71 @@ X BOUT1 9 -650 -300 200 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# formula:IDTQS3253
+# formula:F_3.15A_300V
 #
-DEF formula:IDTQS3253 U 0 40 Y Y 1 F N
-F0 "U" -50 450 50 H V C CNN
-F1 "formula:IDTQS3253" -50 0 50 V V C CNN
-F2 "" -650 300 50 V I C CNN
-F3 "https://www.idt.com/document/dst/qs3253-datasheet" 0 950 50 H I C CNN
-F4 "https://www.digikey.com/product-detail/en/idt-integrated-device-technology-inc/QS3253QG8/800-1725-1-ND/1916277" 600 850 50 H I C CNN "Purchasing Link"
+DEF formula:F_3.15A_300V F 0 0 N Y 1 F N
+F0 "F" 80 0 50 V V C CNN
+F1 "formula:F_3.15A_300V" -75 0 50 V V C CNN
+F2 "footprints:Fuse_TE7_Littelfuse-807Series" -70 0 50 V I C CNN
+F3 "http://www.mouser.com/ds/2/240/Littelfuse_Fuse_807_Datasheet.pdf-794915.pdf" 80 0 50 V I C CNN
+F4 "Mouser" 0 0 60 H I C CNN "MFN"
+F5 "80713150440" 0 0 60 H I C CNN "MPN"
+F6 "https://www.mouser.com/ProductDetail/Littelfuse/80713150440/?qs=%2fha2pyFaduj6aUSS3K8RSlC9flo%2fx0HLwwpdMiFRoD3Yb7kI5hEeOg%3d%3d" 480 400 60 V I C CNN "PurchasingLink"
+$FPLIST
+ *Fuse*
+$ENDFPLIST
 DRAW
-S 200 500 -300 -450 0 1 0 f
-X EA 1 -500 350 200 R 50 50 1 1 I
-X I0B 10 400 -400 200 L 50 50 1 1 I
-X I1B 11 400 -300 200 L 50 50 1 1 I
-X I2B 12 400 -200 200 L 50 50 1 1 I
-X I3B 13 400 -100 200 L 50 50 1 1 I
-X S0 14 -500 150 200 R 50 50 1 1 I
-X EB 15 -500 250 200 R 50 50 1 1 I
-X VCC 16 -500 -250 200 R 50 50 1 1 I
-X S1 2 -500 50 200 R 50 50 1 1 I
-X I3A 3 400 400 200 L 50 50 1 1 I
-X I2A 4 400 300 200 L 50 50 1 1 I
-X I1A 5 400 200 200 L 50 50 1 1 I
-X I0A 6 400 100 200 L 50 50 1 1 I
-X YA 7 -500 -50 200 R 50 50 1 1 I
-X GND 8 -500 -350 200 R 50 50 1 1 I
-X YB 9 -500 -150 200 R 50 50 1 1 I
+S -30 -100 30 100 0 1 10 N
+P 2 0 1 0 0 100 0 -100 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# formula:LED_0805
+#
+DEF formula:LED_0805 D 0 40 N N 1 F N
+F0 "D" 0 -100 50 H V C CNN
+F1 "formula:LED_0805" 0 100 50 H V C CNN
+F2 "footprints:LED_0805_OEM" -100 0 50 H I C CNN
+F3 "http://www.osram-os.com/Graphics/XPic9/00078860_0.pdf" 0 100 50 H I C CNN
+F4 "DK" 0 0 60 H I C CNN "MFN"
+F5 "475-1410-1-ND" 0 0 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/products/en?keywords=475-1410-1-ND" 400 500 60 H I C CNN "PurchasingLink"
+$FPLIST
+ LED*
+$ENDFPLIST
+DRAW
+P 2 0 1 8 -50 -50 -50 50 N
+P 2 0 1 0 -50 0 50 0 N
+P 4 0 1 8 50 -50 50 50 -50 0 50 -50 N
+P 5 0 1 0 -120 -30 -180 -90 -150 -90 -180 -90 -180 -60 N
+P 5 0 1 0 -70 -30 -130 -90 -100 -90 -130 -90 -130 -60 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# formula:LM358DT
+#
+DEF formula:LM358DT U 0 40 Y Y 2 F N
+F0 "U" 150 350 50 H V C CNN
+F1 "formula:LM358DT" 250 250 50 H V C CNN
+F2 "" -100 50 50 H I C CNN
+F3 "www.st.com/content/ccc/resource/technical/document/datasheet/61/46/87/01/98/ed/44/c5/CD00000464.pdf/files/CD00000464.pdf/jcr:content/translations/en.CD00000464.pdf" -400 700 50 H I C CNN
+F4 "https://www.digikey.com/product-detail/en/stmicroelectronics/LM358DT/497-1591-1-ND/592083" -350 850 50 H I C CNN "PurchasingLink"
+DRAW
+P 4 0 1 0 -150 300 -150 -300 350 0 -150 300 f
+X Out 1 550 0 200 L 50 50 1 1 I
+X - 2 -350 100 200 R 50 50 1 1 I
+X + 3 -350 -100 200 R 50 50 1 1 I
+X GND 4 0 -400 200 U 50 50 1 1 I
+X VIN 8 0 400 200 D 50 50 1 1 I
+X GND 4 0 -400 200 U 50 50 2 1 I
+X + 5 -350 -100 200 R 50 50 2 1 I
+X - 6 -350 100 200 R 50 50 2 1 I
+X Out 7 550 0 200 L 50 50 2 1 I
+X VIN 8 0 400 200 D 50 50 2 1 I
 ENDDRAW
 ENDDEF
 #
@@ -367,6 +490,27 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# formula:R_10K
+#
+DEF formula:R_10K R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "formula:R_10K" -100 0 50 V V C CNN
+F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
+F3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" 80 0 50 H I C CNN
+F4 "DK" 0 0 60 H I C CNN "MFN"
+F5 "CRS0805-FX-1002ELFCT-ND" 0 0 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/products/en?keywords=CRS0805-FX-1002ELFCT-ND" 480 400 60 H I C CNN "PurchasingLink"
+$FPLIST
+ R_*
+ Resistor_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # formula:R_10k
 #
 DEF formula:R_10k R 0 0 N Y 1 F N
@@ -378,6 +522,27 @@ F4 "CRS0805-FX-1002ELFCT-ND" 0 0 60 H I C CNN "MPN"
 F5 "Digi-Key" 0 0 60 H I C CNN "MFN"
 F6 "Value" 0 0 60 H I C CNN "Package"
 F7 "https://www.digikey.com/products/en?keywords=CRS0805-FX-1002ELFCT-ND" 480 400 60 H I C CNN "PurchasingLink"
+$FPLIST
+ R_*
+ Resistor_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# formula:R_1K
+#
+DEF formula:R_1K R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "formula:R_1K" -100 0 50 V V C CNN
+F2 "footprints:R_0805_OEM" -70 0 50 H I C CNN
+F3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" 80 0 50 H I C CNN
+F4 "DK" 0 0 60 H I C CNN "MFN"
+F5 "RNCP0805FTD1K00CT-ND" 0 0 60 H I C CNN "MPN"
+F6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" 480 400 60 H I C CNN "PurchasingLink"
 $FPLIST
  R_*
  Resistor_*
@@ -428,6 +593,35 @@ DRAW
 S -40 -100 40 100 0 1 10 N
 X ~ 1 0 150 50 D 50 50 1 1 P
 X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# formula:SN74LV4052APWR
+#
+DEF formula:SN74LV4052APWR U 0 40 Y Y 1 F N
+F0 "U" -50 450 50 H V C CNN
+F1 "formula:SN74LV4052APWR" 0 0 50 V V C CNN
+F2 "" -650 300 50 V I C CNN
+F3 "www.ti.com/lit/ds/symlink/sn74lv4052a.pdf" 0 950 50 H I C CNN
+F4 "https://www.digikey.com/product-detail/en/texas-instruments/SN74LV4052APWR/296-3831-1-ND/390425" 600 850 50 H I C CNN "Purchasing Link"
+DRAW
+S 200 500 -300 -450 0 1 0 f
+X I0B 1 400 -400 200 L 50 50 1 1 I
+X S0 10 -500 150 200 R 50 50 1 1 I
+X I3A 11 400 400 200 L 50 50 1 1 I
+X I0A 12 400 100 200 L 50 50 1 1 I
+X ACOM 13 -500 250 200 R 50 50 1 1 I
+X I1A 14 400 200 200 L 50 50 1 1 I
+X I2A 15 400 300 200 L 50 50 1 1 I
+X VCC 16 -500 -250 200 R 50 50 1 1 I
+X I2B 2 400 -200 200 L 50 50 1 1 I
+X BCOM 3 -500 350 200 R 50 50 1 1 I
+X I3B 4 400 -100 200 L 50 50 1 1 I
+X I1B 5 400 -300 200 L 50 50 1 1 I
+X INH 6 -500 -150 200 R 50 50 1 1 I
+X GND 7 -500 -50 200 R 50 50 1 1 I
+X GND 8 -500 -350 200 R 50 50 1 1 I
+X S1 9 -500 50 200 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #

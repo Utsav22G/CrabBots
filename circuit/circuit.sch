@@ -4450,13 +4450,13 @@ F 3 "~" H 750 3350 50  0001 C CNN
 	1    750  3350
 	-1   0    0    -1  
 $EndComp
-Text Label 950  2850 0    50   ~ 0
+Text Label 950  3250 0    50   ~ 0
 red_4
-Text Label 950  2950 0    50   ~ 0
+Text Label 950  3350 0    50   ~ 0
 red_3
-Text Label 950  3050 0    50   ~ 0
+Text Label 950  3450 0    50   ~ 0
 red_2
-Text Label 950  3150 0    50   ~ 0
+Text Label 950  3550 0    50   ~ 0
 red_1
 Text Label 950  2450 0    50   ~ 0
 red_8
@@ -4466,13 +4466,13 @@ Text Label 950  2650 0    50   ~ 0
 red_6
 Text Label 950  2750 0    50   ~ 0
 red_5
-Text Label 950  3550 0    50   ~ 0
+Text Label 950  3150 0    50   ~ 0
 blue_5
-Text Label 950  3450 0    50   ~ 0
+Text Label 950  3050 0    50   ~ 0
 blue_6
-Text Label 950  3350 0    50   ~ 0
+Text Label 950  2950 0    50   ~ 0
 blue_7
-Text Label 950  3250 0    50   ~ 0
+Text Label 950  2850 0    50   ~ 0
 blue_8
 $Comp
 L Amplifier_Operational:LMC6484 U1
@@ -5118,7 +5118,7 @@ U 1 1 5BF631B0
 P 5750 1300
 F 0 "U6" H 5750 1542 50  0000 C CNN
 F 1 "LM3480" H 5750 1451 50  0000 C CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23-3-Lead_TabPin2" H 5700 1500 50  0001 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 5700 1500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm3480.pdf" H 5850 1050 50  0001 C CNN
 F 4 "DK" H 5800 1625 60  0001 C CNN "MFN"
 F 5 "LM3480IM3-3.3CT-ND" H 5900 1725 60  0001 C CNN "MPN"

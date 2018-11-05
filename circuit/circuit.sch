@@ -2114,11 +2114,11 @@ U 1 1 5BE034E8
 P 15300 6350
 F 0 "C6" H 15415 6396 50  0000 L CNN
 F 1 "C_2.2uF" H 15415 6305 50  0000 L CNN
-F 2 "footprints:C_0603_1608Metric" H 15338 6200 50  0001 C CNN
-F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_X5R_4V-to-50V_25.pdf" H 15325 6450 50  0001 C CNN
+F 2 "footprints:R_0805_OEM" H 15338 6200 50  0001 C CNN
+F 3 "" H 15325 6450 50  0001 C CNN
 F 4 "DK" H 15300 6350 60  0001 C CNN "MFN"
 F 5 "311-1451-1-ND" H 15300 6350 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/product-detail/en/yageo/CC0603KRX5R6BB225/311-1451-1-ND/2833757" H 15725 6850 60  0001 C CNN "PurchasingLink"
+F 6 "https://www.digikey.com/product-detail/en/taiyo-yuden/EMK212BJ225KGHT/587-3323-1-ND/4157368" H 15725 6850 60  0001 C CNN "PurchasingLink"
 	1    15300 6350
 	1    0    0    -1  
 $EndComp
@@ -2254,10 +2254,10 @@ P 15000 6400
 F 0 "C5" V 14950 6400 50  0000 C CNN
 F 1 "C_0.01uF" V 15050 6400 50  0000 C CNN
 F 2 "footprints:C_0805_OEM" H 15038 6250 50  0001 C CNN
-F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 15025 6500 50  0001 C CNN
+F 3 "" H 15025 6500 50  0001 C CNN
 F 4 "DK" H 15000 6400 60  0001 C CNN "MFN"
 F 5 "478-3352-1-ND" H 15000 6400 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 15425 6900 60  0001 C CNN "PurchasingLink"
+F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21B103KBCSFNC/1276-2439-1-ND/3890525" H 15425 6900 60  0001 C CNN "PurchasingLink"
 	1    15000 6400
 	0    1    1    0   
 $EndComp
@@ -4984,7 +4984,7 @@ L Device:Fuse F1
 U 1 1 5BFED31D
 P 1600 1700
 F 0 "F1" H 1660 1746 50  0000 L CNN
-F 1 "Fuse_2A" H 1660 1655 50  0000 L CNN
+F 1 "Fuse_1A" H 1660 1655 50  0000 L CNN
 F 2 "Resistors_SMD:R_0402" V 1530 1700 50  0001 C CNN
 F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/AFA0000/AFA0000C7.pdf" H 1600 1700 50  0001 C CNN
 	1    1600 1700
@@ -5009,52 +5009,31 @@ Text Label 850  9950 2    50   ~ 0
 SDA
 Wire Wire Line
 	1350 10250 1350 10350
-$Comp
-L power:VCC #PWR05
-U 1 1 5BE22060
-P 1350 10350
-F 0 "#PWR05" H 1350 10200 50  0001 C CNN
-F 1 "VCC" H 1368 10523 50  0000 C CNN
-F 2 "" H 1350 10350 50  0001 C CNN
-F 3 "" H 1350 10350 50  0001 C CNN
-	1    1350 10350
-	-1   0    0    1   
-$EndComp
 NoConn ~ 3200 10050
 NoConn ~ 3200 10250
-Wire Wire Line
-	3200 9950 3600 9950
 $Comp
 L power:GND #PWR019
 U 1 1 5BE408C1
-P 3600 10200
-F 0 "#PWR019" H 3600 9950 50  0001 C CNN
-F 1 "GND" H 3605 10027 50  0000 C CNN
-F 2 "" H 3600 10200 50  0001 C CNN
-F 3 "" H 3600 10200 50  0001 C CNN
-	1    3600 10200
+P 3500 10250
+F 0 "#PWR019" H 3500 10000 50  0001 C CNN
+F 1 "GND" H 3505 10077 50  0000 C CNN
+F 2 "" H 3500 10250 50  0001 C CNN
+F 3 "" H 3500 10250 50  0001 C CNN
+	1    3500 10250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3200 10150 3600 10150
-Wire Wire Line
-	3600 10150 3600 10200
-Wire Wire Line
-	3600 9950 3600 10150
-Connection ~ 3600 10150
 NoConn ~ 3200 9850
 NoConn ~ 3200 9550
 NoConn ~ 3200 9650
-NoConn ~ 1350 10150
 $Comp
 L power:GND #PWR04
 U 1 1 5BEB9C0E
-P 1150 10350
-F 0 "#PWR04" H 1150 10100 50  0001 C CNN
-F 1 "GND" H 1155 10177 50  0000 C CNN
-F 2 "" H 1150 10350 50  0001 C CNN
-F 3 "" H 1150 10350 50  0001 C CNN
-	1    1150 10350
+P 800 10200
+F 0 "#PWR04" H 800 9950 50  0001 C CNN
+F 1 "GND" H 805 10027 50  0000 C CNN
+F 2 "" H 800 10200 50  0001 C CNN
+F 3 "" H 800 10200 50  0001 C CNN
+	1    800  10200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -5109,8 +5088,6 @@ Connection ~ 1050 9950
 Wire Wire Line
 	1350 9950 1150 9950
 Wire Wire Line
-	1150 9950 1150 10350
-Wire Wire Line
 	1050 9650 1050 9400
 $Comp
 L formula:LM3480 U6
@@ -5163,9 +5140,7 @@ Text Label 1000 9400 2    50   ~ 0
 Wire Wire Line
 	1050 9400 1000 9400
 Connection ~ 1050 9400
-Wire Wire Line
-	3200 9750 3350 9750
-Text Label 3350 9750 0    50   ~ 0
+Text Label 3600 9750 0    50   ~ 0
 3.3V
 Text Label 14700 2800 2    50   ~ 0
 SDA
@@ -5179,4 +5154,82 @@ Wire Notes Line
 	600  550  600  11000
 Wire Notes Line
 	600  8650 8900 8650
+$Comp
+L formula:R_10K R29
+U 1 1 5BE079E8
+P 1200 10150
+F 0 "R29" V 1200 10150 50  0000 C CNN
+F 1 "R_10K" V 1300 10150 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" H 1130 10150 50  0001 C CNN
+F 3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" H 1280 10150 50  0001 C CNN
+F 4 "DK" H 1200 10150 60  0001 C CNN "MFN"
+F 5 "CRS0805-FX-1002ELFCT-ND" H 1200 10150 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=CRS0805-FX-1002ELFCT-ND" H 1680 10550 60  0001 C CNN "PurchasingLink"
+	1    1200 10150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1050 10150 800  10150
+Wire Wire Line
+	800  10150 800  10200
+Wire Wire Line
+	1150 9950 1150 10000
+Wire Wire Line
+	1150 10000 800  10000
+Wire Wire Line
+	800  10000 800  10150
+Connection ~ 800  10150
+$Comp
+L formula:R_10K R30
+U 1 1 5BE3C2D2
+P 1350 10500
+F 0 "R30" V 1350 10500 50  0000 C CNN
+F 1 "R_10K" V 1450 10500 50  0000 C CNN
+F 2 "footprints:R_0805_OEM" H 1280 10500 50  0001 C CNN
+F 3 "http://www.bourns.com/data/global/pdfs/CRS.pdf" H 1430 10500 50  0001 C CNN
+F 4 "DK" H 1350 10500 60  0001 C CNN "MFN"
+F 5 "CRS0805-FX-1002ELFCT-ND" H 1350 10500 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=CRS0805-FX-1002ELFCT-ND" H 1830 10900 60  0001 C CNN "PurchasingLink"
+	1    1350 10500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1350 10650 1350 10700
+Wire Wire Line
+	1350 10700 1450 10700
+Text Label 1450 10700 0    50   ~ 0
+3.3V
+$Comp
+L formula:C_0.1uF C8
+U 1 1 5BE577AF
+P 3500 9900
+F 0 "C8" H 3615 9946 50  0000 L CNN
+F 1 "C_0.1uF" H 3615 9855 50  0000 L CNN
+F 2 "footprints:C_0805_OEM" H 3538 9750 50  0001 C CNN
+F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 3525 10000 50  0001 C CNN
+F 4 "DK" H 3500 9900 60  0001 C CNN "MFN"
+F 5 "478-3352-1-ND" H 3500 9900 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 3925 10400 60  0001 C CNN "PurchasingLink"
+	1    3500 9900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 9750 3500 9750
+Connection ~ 3500 9750
+Wire Wire Line
+	3500 9750 3600 9750
+Wire Wire Line
+	3200 9950 3350 9950
+Wire Wire Line
+	3350 9950 3350 10050
+Wire Wire Line
+	3350 10050 3500 10050
+Wire Wire Line
+	3200 10150 3500 10150
+Wire Wire Line
+	3500 10150 3500 10250
+Wire Wire Line
+	3500 10050 3500 10150
+Connection ~ 3500 10050
+Connection ~ 3500 10150
 $EndSCHEMATC

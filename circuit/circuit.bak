@@ -2114,7 +2114,7 @@ U 1 1 5BE034E8
 P 15300 6350
 F 0 "C6" H 15415 6396 50  0000 L CNN
 F 1 "C_2.2uF" H 15415 6305 50  0000 L CNN
-F 2 "footprints:C_0603_1608Metric" H 15338 6200 50  0001 C CNN
+F 2 "footprints:R_0805_OEM" H 15338 6200 50  0001 C CNN
 F 3 "" H 15325 6450 50  0001 C CNN
 F 4 "DK" H 15300 6350 60  0001 C CNN "MFN"
 F 5 "311-1451-1-ND" H 15300 6350 60  0001 C CNN "MPN"
@@ -2254,10 +2254,10 @@ P 15000 6400
 F 0 "C5" V 14950 6400 50  0000 C CNN
 F 1 "C_0.01uF" V 15050 6400 50  0000 C CNN
 F 2 "footprints:C_0805_OEM" H 15038 6250 50  0001 C CNN
-F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 15025 6500 50  0001 C CNN
+F 3 "" H 15025 6500 50  0001 C CNN
 F 4 "DK" H 15000 6400 60  0001 C CNN "MFN"
 F 5 "478-3352-1-ND" H 15000 6400 60  0001 C CNN "MPN"
-F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 15425 6900 60  0001 C CNN "PurchasingLink"
+F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL21B103KBCSFNC/1276-2439-1-ND/3890525" H 15425 6900 60  0001 C CNN "PurchasingLink"
 	1    15000 6400
 	0    1    1    0   
 $EndComp
@@ -4443,8 +4443,8 @@ $Comp
 L Connector:Conn_01x20_Female J1
 U 1 1 5BEEF940
 P 750 3350
-F 0 "J1" H 1200 4400 50  0000 L CNN
-F 1 "Conn_01x20_Female" H 1050 4500 50  0000 L CNN
+F 0 "J1" H 150 4300 50  0000 L CNN
+F 1 "Conn_01x20_Female" H 0   4400 50  0000 L CNN
 F 2 "footprints:Pin_Header_Straight_2x10" H 750 3350 50  0001 C CNN
 F 3 "~" H 750 3350 50  0001 C CNN
 	1    750  3350
@@ -4985,7 +4985,7 @@ U 1 1 5BFED31D
 P 1600 1700
 F 0 "F1" H 1660 1746 50  0000 L CNN
 F 1 "Fuse_1A" H 1660 1655 50  0000 L CNN
-F 2 "Resistors_SMD:R_0402" V 1530 1700 50  0001 C CNN
+F 2 "footprints:R_0805_OEM" V 1530 1700 50  0001 C CNN
 F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/AFA0000/AFA0000C7.pdf" H 1600 1700 50  0001 C CNN
 	1    1600 1700
 	1    0    0    -1  
@@ -5104,9 +5104,7 @@ F 6 "https://www.digikey.com/product-detail/en/texas-instruments/LM3480IM3-3.3/L
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5450 1300 5350 1300
-Wire Wire Line
-	5350 1300 5350 1150
+	5450 1300 5400 1300
 $Comp
 L power:VCC #PWR022
 U 1 1 5BF6F94B
@@ -5120,7 +5118,7 @@ F 3 "" H 5350 1150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6050 1300 6100 1300
-Text Label 6100 1300 0    50   ~ 0
+Text Label 6200 1300 0    50   ~ 0
 3.3V
 Wire Wire Line
 	5750 1600 5750 1650
@@ -5232,4 +5230,45 @@ Wire Wire Line
 	3500 10050 3500 10150
 Connection ~ 3500 10050
 Connection ~ 3500 10150
+$Comp
+L formula:C_0.1uF C9
+U 1 1 5BE1A86E
+P 5400 1450
+F 0 "C9" H 5200 1450 50  0000 L CNN
+F 1 "C_0.1uF" H 5100 1350 50  0000 L CNN
+F 2 "footprints:C_0805_OEM" H 5438 1300 50  0001 C CNN
+F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 5425 1550 50  0001 C CNN
+F 4 "DK" H 5400 1450 60  0001 C CNN "MFN"
+F 5 "478-3352-1-ND" H 5400 1450 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 5825 1950 60  0001 C CNN "PurchasingLink"
+	1    5400 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:C_0.1uF C10
+U 1 1 5BE1A926
+P 6100 1450
+F 0 "C10" H 6200 1450 50  0000 L CNN
+F 1 "C_0.1uF" H 6100 1350 50  0000 L CNN
+F 2 "footprints:C_0805_OEM" H 6138 1300 50  0001 C CNN
+F 3 "http://datasheets.avx.com/X7RDielectric.pdf" H 6125 1550 50  0001 C CNN
+F 4 "DK" H 6100 1450 60  0001 C CNN "MFN"
+F 5 "478-3352-1-ND" H 6100 1450 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=478-3352-1-ND" H 6525 1950 60  0001 C CNN "PurchasingLink"
+	1    6100 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 1300 5350 1300
+Wire Wire Line
+	5350 1300 5350 1150
+Connection ~ 5400 1300
+Wire Wire Line
+	6100 1300 6200 1300
+Connection ~ 6100 1300
+Wire Wire Line
+	6100 1600 5750 1600
+Connection ~ 5750 1600
+Wire Wire Line
+	5400 1600 5750 1600
 $EndSCHEMATC

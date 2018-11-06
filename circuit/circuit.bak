@@ -4988,7 +4988,7 @@ F 1 "Fuse_1A" H 1660 1655 50  0000 L CNN
 F 2 "footprints:R_0805_OEM" V 1530 1700 50  0001 C CNN
 F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/AFA0000/AFA0000C7.pdf" H 1600 1700 50  0001 C CNN
 	1    1600 1700
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 Text Notes 1450 9050 0    118  ~ 0
 ACCELEROMETER

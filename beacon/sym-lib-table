@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name beacon-rescue)(type Legacy)(uri ${KIPRJMOD}/beacon-rescue.lib)(options "")(descr ""))
+)

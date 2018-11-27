@@ -25,6 +25,7 @@ void setup(void) {
 
   Serial.print("Range = "); Serial.print(2 << lis.getRange());
   Serial.println("G");
+  pinMode(8, OUTPUT);
 }
 
 void loop() {
@@ -34,6 +35,9 @@ void loop() {
   Serial.print("  \tY:  "); Serial.print(lis.y);
   Serial.print("  \tZ:  "); Serial.print(lis.z);
 
+  if(lis.z > 1) {
+    digitalWrite(8, HIGH);
+  }
   /* Or....get a new sensor event, normalized */
   sensors_event_t event;
   lis.getEvent(&event);
@@ -46,5 +50,7 @@ void loop() {
 
   Serial.println();
 
-  delay(200);
+  delay(100);
+  digitalWrite(8, LOW);
+  delay(100);
 }

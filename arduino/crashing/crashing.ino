@@ -8,6 +8,7 @@
 #define APWM 9
 #define BDIR 5
 #define ADIR 4
+#define ISSUE 12
 
 bool crash = true;
 
@@ -19,9 +20,9 @@ void setup(void) {
   if (! lis.begin(0x18)) {   // change this to 0x19 for alternative i2c address
     while (1){
       digitalWrite(8,HIGH);
-      delay(100);
+      delay(250);
       digitalWrite(8,LOW);
-      delay(100);
+      delay(250);
     }
   }
   
@@ -30,10 +31,12 @@ void setup(void) {
   pinMode(APWM, OUTPUT);
   pinMode(BPWM, OUTPUT);
 
+  pinMode(ISSUE, INPUT);
+
   digitalWrite(BPWM, HIGH);
   digitalWrite(APWM, HIGH);
   digitalWrite(ADIR, HIGH);
-  digitalWrite(BDIR, HIGH);
+  digitalWrite(BDIR, LOW); //drives straight like this
 
   digitalWrite(8,HIGH);
   
@@ -41,13 +44,12 @@ void setup(void) {
 }
 
 void loop() {
-  digitalWrite(BDIR, LOW);
   lis.read();      // get X Y and Z data at once
   sensors_event_t event; 
   lis.getEvent(&event);
   // Then print out the raw data
   
-  if(event.acceleration.z > 13) {
+  if(abs(event.acceleration.z) > 13) {
     if (crash){
       crash = false;
     }
@@ -55,13 +57,24 @@ void loop() {
       crash = true;
     }
   }
-  
+  if(digitalRead(ISSUE) == LOW){
+      digitalWrite(BPWM, LOW);
+      digitalWrite(APWM, LOW);
+      digitalWrite(8,HIGH);
+      delay(60);
+      digitalWrite(8,LOW);
+      delay(60);
+    }
   if(crash){
     digitalWrite(8, LOW);
     digitalWrite(BPWM, LOW);
     digitalWrite(APWM, LOW);
   }
   else {
+    turnL();
+    digitalWrite(BPWM, LOW);
+    digitalWrite(APWM, LOW);
+    delay(10);
     digitalWrite(BPWM, HIGH);
     digitalWrite(APWM, HIGH);
     digitalWrite(8, HIGH);
@@ -75,5 +88,22 @@ void loop() {
 //  digitalWrite(BPWM, LOW);
 //  digitalWrite(APWM, LOW);
 //  digitalWrite(8, LOW );
-  delay(11);
+  delay(6);
+}
+
+void turnL(){
+  digitalWrite(ADIR, LOW);
+  digitalWrite(BDIR, HIGH);
+}
+void turnR(){
+  digitalWrite(ADIR, HIGH);
+  digitalWrite(BDIR, HIGH);
+}
+void straight(){
+  digitalWrite(ADIR, HIGH);
+  digitalWrite(BDIR, LOW);
+}
+void back(){
+  digitalWrite(ADIR, LOW);
+  digitalWrite(BDIR, HIGH);
 }

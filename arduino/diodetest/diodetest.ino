@@ -1,5 +1,5 @@
-#define RED A0
-#define BLUE A1
+#define RED A2
+#define BLUE A3
 
 int init_red;
 int init_blue;
@@ -18,8 +18,8 @@ float rightspeed;
 #define BPWM 10
 #define BDIR 5
 
-#define MUX0 0
-#define MUX1 1
+#define MUX0 2
+#define MUX1 3
 
 void setup() {
   // put your setup code here, to run once:
@@ -31,9 +31,10 @@ void setup() {
   pinMode(BDIR,OUTPUT);
   pinMode(MUX0,OUTPUT);
   pinMode(MUX1,OUTPUT);
+  pinMode(8,OUTPUT);
 
   digitalWrite(MUX0,LOW);
-  digitalWrite(MUX1,LOW);
+  digitalWrite(MUX1,HIGH);
   delay(200);
   init_red = analogRead(RED);
   init_blue = analogRead(BLUE);
@@ -41,17 +42,27 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(MUX0,HIGH);
-  digitalWrite(MUX1,LOW);
+  digitalWrite(MUX0,LOW);
+  digitalWrite(MUX1,HIGH);
 
   curr_red = analogRead(RED);
   curr_blue = analogRead(BLUE);
 
   diff_red = curr_red - init_red;
   diff_blue = curr_blue - init_blue;
+  
 
-  analogWrite(APWM,100);
-  analogWrite(BPWM,100);
+  if(diff_blue > 50) {
+    digitalWrite(ADIR,HIGH);
+    digitalWrite(BDIR,LOW);
+    analogWrite(APWM,100);
+    analogWrite(BPWM,100);
+    digitalWrite(8,HIGH);
+  } else {
+    analogWrite(APWM,0);
+    analogWrite(BPWM,0);
+    digitalWrite(8,LOW);
+  }
 
 }
 

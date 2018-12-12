@@ -1,5 +1,5 @@
-#define RED A0
-#define BLUE A1
+#define RED A2
+#define BLUE A3
 
 int init_red;
 int init_blue;
@@ -18,11 +18,12 @@ float rightspeed;
 #define BPWM 10
 #define BDIR 5
 
-#define MUX0 0
-#define MUX1 1
+#define MUX0 2
+#define MUX1 3
 
 void setup() {
   // put your setup code here, to run once:
+  Serial.begin(9600);
   pinMode(RED,INPUT);
   pinMode(BLUE,INPUT);
   pinMode(APWM,OUTPUT);
@@ -31,8 +32,9 @@ void setup() {
   pinMode(BDIR,OUTPUT);
   pinMode(MUX0,OUTPUT);
   pinMode(MUX1,OUTPUT);
+  pinMode(8,OUTPUT);
 
-  digitalWrite(MUX0,LOW);
+  digitalWrite(MUX0,HIGH);
   digitalWrite(MUX1,LOW);
   delay(200);
   init_red = analogRead(RED);
@@ -41,6 +43,7 @@ void setup() {
 }
 
 void loop() {
+  Serial.println("hello");
   digitalWrite(MUX0,HIGH);
   digitalWrite(MUX1,LOW);
 
@@ -49,10 +52,8 @@ void loop() {
 
   diff_red = curr_red - init_red;
   diff_blue = curr_blue - init_blue;
-
-  analogWrite(APWM,100);
-  analogWrite(BPWM,100);
-
+  
+  delay(200);
 }
 
 void turnL(){

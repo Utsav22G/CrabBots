@@ -23,6 +23,7 @@ float rightspeed;
 
 void setup() {
   // put your setup code here, to run once:
+  Serial.begin(9600);
   pinMode(RED,INPUT);
   pinMode(BLUE,INPUT);
   pinMode(APWM,OUTPUT);
@@ -33,8 +34,8 @@ void setup() {
   pinMode(MUX1,OUTPUT);
   pinMode(8,OUTPUT);
 
-  digitalWrite(MUX0,LOW);
-  digitalWrite(MUX1,HIGH);
+  digitalWrite(MUX0,HIGH);
+  digitalWrite(MUX1,LOW);
   delay(200);
   init_red = analogRead(RED);
   init_blue = analogRead(BLUE);
@@ -42,8 +43,9 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(MUX0,LOW);
-  digitalWrite(MUX1,HIGH);
+  Serial.println("hello");
+  digitalWrite(MUX0,HIGH);
+  digitalWrite(MUX1,LOW);
 
   curr_red = analogRead(RED);
   curr_blue = analogRead(BLUE);
@@ -51,19 +53,7 @@ void loop() {
   diff_red = curr_red - init_red;
   diff_blue = curr_blue - init_blue;
   
-
-  if(diff_blue > 50) {
-    digitalWrite(ADIR,HIGH);
-    digitalWrite(BDIR,LOW);
-    analogWrite(APWM,100);
-    analogWrite(BPWM,100);
-    digitalWrite(8,HIGH);
-  } else {
-    analogWrite(APWM,0);
-    analogWrite(BPWM,0);
-    digitalWrite(8,LOW);
-  }
-
+  delay(200);
 }
 
 void turnL(){

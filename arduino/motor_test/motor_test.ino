@@ -38,17 +38,17 @@ void loop() {
   delay(400);
   on();
   turnL();
-  delay(200);
+  delay(100);
   off();
   delay(400);
   on();
   turnR();
-  delay(200);
+  delay(100);
   off();
   delay(400);
   on();
   back();
-  delay(200);
+  delay(100);
   off();
   delay(400);
   

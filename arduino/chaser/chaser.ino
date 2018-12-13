@@ -108,6 +108,7 @@ Adafruit_NeoPixel strip = Adafruit_NeoPixel(LED_COUNT, LED_INPUT, NEO_RGB + NEO_
 Adafruit_LIS3DH lis = Adafruit_LIS3DH();
 
 void setup() {
+  delay(5000);
   Serial.begin(9600);
   
   pinMode(RED,INPUT);

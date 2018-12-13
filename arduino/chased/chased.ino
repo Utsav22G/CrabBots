@@ -18,7 +18,7 @@
 #define MUX0 2
 #define MUX1 3
 
-#define LED_COUNT 8
+#define LED_COUNT 20
 #define LED_INPUT 7
 
 
@@ -173,7 +173,7 @@ void loop() {
   sensors_event_t event; 
   lis.getEvent(&event);
   
-  if(abs(event.acceleration.z) > 8) {
+  if(abs(event.acceleration.z) > 20) {
     if (bump){
       bump = false;
     }
@@ -316,7 +316,8 @@ int ReadPhotodiodes() {
   digitalWrite(MUX1, LOW);
   delay(mux_delay);
   //curr_red_back = analogRead(RED);
-  curr_blue_back = analogRead(BLUE);
+  curr_blue_back = analogRead(BLUE);;
+   right_total = scale*(right1 + right2 + right3 + right4)
 
   //diff_red_back = curr_red_back - init_red_back;
   diff_blue_back = curr_blue_back - init_blue_back;
@@ -339,8 +340,8 @@ int Move() {
   // send response to the motors
   // ----------------------------
 
-   left_total = scale*(left1 + left2 + left3 + left4);
-   right_total = scale*(right1 + right2 + right3 + right4);
+   left_total = scale*(left1 + left2 + left3 + left4) - 40;
+   right_total = scale*(right1 + right2 + right3 + right4) - 40;
 
    digitalWrite(ADIR,HIGH);
    digitalWrite(BDIR,LOW);
@@ -368,4 +369,3 @@ void colorWipe(uint32_t c) {
     strip.show();
   }
 }
-

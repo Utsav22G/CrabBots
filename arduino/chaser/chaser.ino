@@ -173,7 +173,7 @@ void loop() {
   sensors_event_t event; 
   lis.getEvent(&event);
   
-  if(abs(event.acceleration.z) > 8) {
+  if(abs(event.acceleration.z) > 20) {
     if (bump){
       bump = false;
     }
@@ -368,4 +368,3 @@ void colorWipe(uint32_t c) {
     strip.show();
   }
 }
-

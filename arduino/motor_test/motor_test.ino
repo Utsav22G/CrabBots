@@ -33,38 +33,38 @@ void setup(void) {
 
 void loop() {
   straight();
-  delay(200);
+  delay(500);
   off();
-  delay(400);
+  delay(500);
   on();
   turnL();
-  delay(100);
+  delay(500);
   off();
-  delay(400);
+  delay(500);
   on();
   turnR();
-  delay(100);
+  delay(500);
   off();
-  delay(400);
+  delay(500);
   on();
   back();
-  delay(100);
+  delay(500);
   off();
-  delay(400);
+  delay(500);
   
 }
 
 void turnL(){
-  digitalWrite(ADIR, LOW);
-  digitalWrite(BDIR, HIGH);
+  digitalWrite(APWM, LOW);
+  //digitalWrite(BDIR, HIGH);
 }
 void turnR(){
-  digitalWrite(ADIR, HIGH);
-  digitalWrite(BDIR, HIGH);
+  //digitalWrite(ADIR, HIGH);
+  digitalWrite(BPWM, LOW);
 }
 void straight(){
-  digitalWrite(ADIR, HIGH);
-  digitalWrite(BDIR, LOW);
+  //digitalWrite(ADIR, HIGH);
+  //digitalWrite(BDIR, LOW);
 }
 void back(){
   digitalWrite(ADIR, LOW);

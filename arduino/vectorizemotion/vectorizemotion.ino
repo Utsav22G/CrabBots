@@ -45,8 +45,8 @@ int diff_blue_right;
 int diff_blue_left;
 int diff_blue_back;
 
-int mux_delay = 150;
-int motor_delay = 200;
+int mux_delay = 50;
+int motor_delay = 100;
 
 unsigned long prevTime = 0;
 unsigned long currTime;

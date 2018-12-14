@@ -6,7 +6,7 @@ To learn more about our project, visit our ![website!](http://poe.olin.edu/2018/
 
 This github serves a storage capsule for our CAD files, PCB designs, and code used in our project. 
 
-## PCB
+## PCB (Robot)
 Our PCB is based off the Arduino Uno and includes some additional features:
 * An analog mux for an increased number of anlog input pins
 * A dual h-bridge motor driver to power our motors
@@ -22,8 +22,15 @@ uses less parts so it's still easy to assemble a working board.
 
 If you are up for an extra challenge, feel free to submit a pull request for a flashy, new board.
 
+## PCB (Beacon)
+What is the best accessory for our CrabBot? A fancy flashlight that can be programmed to display any color and controlled with a
+tactile toggle button, of course! Our beacons are a useful tool for debugging and controlling our bots.
+
+The schematic for the board stayed mostly the same. An input for **gnd** and **vcc** are needed for the board to function. We also recommend adding a power switch so the Attiny 85 doesn't drain your battery over time.
+
+
 ## Software
-Our final bots rely on two code files: chaser, chased. When uploaded to our CrabBots, this code will make them chase each other. 
+Our final bots rely on two code files: chaser, chased. When uploaded to our CrabBots, this code will make them chase each other. The code is written in Arduino and relys on multiple libraries including the Adafruit sensor library. The appropriate packages that need to be downloaded can be found ![here](https://learn.adafruit.com/adafruit-lis3dh-triple-axis-accelerometer-breakout/arduino). 
 
 ## Mechanical Design
 The final iteration of CAD can be found here. We printed the components on a Prusa with PLA filament. While this design should not

@@ -11,6 +11,7 @@ Our PCB is based off the Arduino Uno and includes some additional features:
 * An analog mux for an increased number of anlog input pins
 * A dual h-bridge motor driver to power our motors
 * A 3-axis accelerometer for tap/bump detection
+* Support for an RGB strip. We used NeoPixels
 
 Because our PCB follows the same avr architecture as the Arduino Uno (and uses the same Atmega328P-PB), any Arduino code can be
 uploaded through the Arduino IDE compiler to program our boards. However, our boards are lacking usb-serial convertera so an external
@@ -30,7 +31,7 @@ The schematic for the board stayed mostly the same. An input for **gnd** and **v
 
 
 ## Software
-Our final bots rely on two code files: chaser, chased. When uploaded to our CrabBots, this code will make them chase each other. The code is written in Arduino and relys on multiple libraries including the Adafruit sensor library. The appropriate packages that need to be downloaded can be found ![here](https://learn.adafruit.com/adafruit-lis3dh-triple-axis-accelerometer-breakout/arduino). 
+Our final bots rely on two code files: chaser, chased. When uploaded to our CrabBots, this code will make them chase each other. The code is written in Arduino and relys on multiple libraries including the Adafruit sensor library. The appropriate packages that need to be downloaded can be found ![here](https://learn.adafruit.com/adafruit-lis3dh-triple-axis-accelerometer-breakout/arduino) and ![here](https://learn.adafruit.com/adafruit-neopixel-uberguide/basic-connections). 
 
 ## Mechanical Design
 The final iteration of CAD can be found here. We printed the components on a Prusa with PLA filament. While this design should not

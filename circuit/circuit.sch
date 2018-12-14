@@ -1765,7 +1765,7 @@ Wire Wire Line
 Wire Wire Line
 	14400 3000 14400 3100
 $Comp
-L formula:CONN_02X03 P1
+L circuit-rescue:CONN_02X03-formula P1
 U 1 1 5BCC9EE8
 P 2700 2800
 F 0 "P1" H 2900 3100 50  0000 C CNN
@@ -2065,14 +2065,6 @@ F 4 "https://www.digikey.com/product-detail/en/texas-instruments/DRV8834PWP/296-
 	1    14100 6300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	14700 6000 14700 5900
-Wire Wire Line
-	14700 5900 14700 5800
-Connection ~ 14700 5900
-Wire Wire Line
-	14700 5800 14700 5600
-Connection ~ 14700 5800
 $Comp
 L power:VCC #PWR046
 U 1 1 5BF762C1
@@ -2105,7 +2097,6 @@ Wire Wire Line
 	14700 6400 14700 6300
 Wire Wire Line
 	14700 6300 14850 6300
-Connection ~ 14700 6300
 Wire Wire Line
 	14700 6200 15300 6200
 $Comp
@@ -2297,7 +2288,6 @@ Wire Wire Line
 	13450 6000 12850 6000
 Wire Wire Line
 	12850 6000 12850 6200
-Connection ~ 13450 6000
 Connection ~ 12850 6200
 Text Label 14700 1600 2    50   ~ 0
 motorA_PWM
@@ -3089,7 +3079,6 @@ Wire Wire Line
 	3850 5450 3850 6000
 Wire Wire Line
 	3850 6000 3950 6000
-Connection ~ 3850 6000
 Wire Wire Line
 	3300 6400 3300 6450
 $Comp
@@ -3268,7 +3257,6 @@ Wire Wire Line
 	7850 5400 7850 5950
 Wire Wire Line
 	7850 5950 7950 5950
-Connection ~ 7850 5950
 Wire Wire Line
 	7300 6350 7300 6400
 $Comp
@@ -4592,7 +4580,6 @@ Wire Wire Line
 	3850 7300 3850 7850
 Wire Wire Line
 	3850 7850 3950 7850
-Connection ~ 3850 7850
 Wire Wire Line
 	3300 8250 3300 8300
 $Comp
@@ -4775,7 +4762,6 @@ Wire Wire Line
 	7800 7300 7800 7850
 Wire Wire Line
 	7800 7850 7900 7850
-Connection ~ 7800 7850
 Wire Wire Line
 	7250 8250 7250 8300
 $Comp
@@ -5271,4 +5257,68 @@ Wire Wire Line
 Connection ~ 5750 1600
 Wire Wire Line
 	5400 1600 5750 1600
+Wire Wire Line
+	14700 5600 14700 6000
+$Comp
+L Device:D_Photo D3
+U 1 1 5C13FD7A
+P 6050 9800
+F 0 "D3" H 6000 9584 50  0000 C CNN
+F 1 "D_Photo" H 6000 9675 50  0000 C CNN
+F 2 "" H 6000 9800 50  0001 C CNN
+F 3 "~" H 6000 9800 50  0001 C CNN
+	1    6050 9800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR05
+U 1 1 5C13FF5C
+P 5500 9650
+F 0 "#PWR05" H 5500 9500 50  0001 C CNN
+F 1 "+3.3V" H 5515 9823 50  0000 C CNN
+F 2 "" H 5500 9650 50  0001 C CNN
+F 3 "" H 5500 9650 50  0001 C CNN
+	1    5500 9650
+	1    0    0    -1  
+$EndComp
+$Comp
+L formula:R_1K R27
+U 1 1 5C14007D
+P 6650 10150
+F 0 "R27" H 6720 10196 50  0000 L CNN
+F 1 "R_1K" H 6720 10105 50  0000 L CNN
+F 2 "footprints:R_0805_OEM" H 6580 10150 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 6730 10150 50  0001 C CNN
+F 4 "DK" H 6650 10150 60  0001 C CNN "MFN"
+F 5 "RNCP0805FTD1K00CT-ND" H 6650 10150 60  0001 C CNN "MPN"
+F 6 "https://www.digikey.com/products/en?keywords=RNCP0805FTD1K00CT-ND" H 7130 10550 60  0001 C CNN "PurchasingLink"
+	1    6650 10150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR053
+U 1 1 5C140200
+P 6650 10300
+F 0 "#PWR053" H 6650 10050 50  0001 C CNN
+F 1 "GND" H 6655 10127 50  0000 C CNN
+F 2 "" H 6650 10300 50  0001 C CNN
+F 3 "" H 6650 10300 50  0001 C CNN
+	1    6650 10300
+	1    0    0    -1  
+$EndComp
+Text GLabel 7050 9800 2    59   Input ~ 0
+Measurement_Point
+Wire Wire Line
+	5500 9650 5500 9800
+Wire Wire Line
+	5500 9800 5950 9800
+Wire Wire Line
+	6250 9800 6650 9800
+Wire Wire Line
+	6650 9800 6650 10000
+Wire Wire Line
+	6650 9800 7050 9800
+Connection ~ 6650 9800
+Text Notes 7700 9000 2    118  ~ 0
+Light Intensity Detection
 $EndSCHEMATC

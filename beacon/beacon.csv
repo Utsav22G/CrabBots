@@ -1,0 +1,7 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"C1";"C_0805_OEM";1;"C_0.1uF";;;
+2;"J1";"Connector";1;"Conn_01x03_Female";;;
+3;"R1";"R_0805_OEM";1;"R_10K";;;
+4;"R2";"R_0805_OEM";1;"R_200";;;
+5;"SW1";"push_button";1;"SW_Push";;;
+6;"U1";"DIP-8_W7.62mm_Socket";1;"ATtiny45-20PU";;;

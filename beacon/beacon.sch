@@ -70,7 +70,7 @@ F 3 "" H 4950 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L formula:R_200 R2
+L beacon-rescue:R_200-formula R2
 U 1 1 5BDF762D
 P 5850 3450
 F 0 "R2" V 5643 3450 50  0000 C CNN
@@ -125,7 +125,7 @@ Connection ~ 2600 3700
 Text Label 5550 3550 0    50   ~ 0
 PB2
 $Comp
-L formula:R_10K R1
+L beacon-rescue:R_10K-formula R1
 U 1 1 5BDF8DC0
 P 2600 3900
 F 0 "R1" H 2670 3946 50  0000 L CNN

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>/home/utsav22g/Olin Stuff/beacon_circuit/beacon/beacon.sch</source>
-    <date>Sun 04 Nov 2018 05:24:07 PM EST</date>
-    <tool>Eeschema 5.0.1-33cea8e~68~ubuntu18.04.1</tool>
+    <source>D:\Linux\home\Olin Stuff\CrabBots\beacon\beacon.sch</source>
+    <date>11/12/2018 7:16:10 PM</date>
+    <tool>Eeschema (5.0.1)-4</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title/>
@@ -21,7 +21,7 @@
   <components>
     <comp ref="U1">
       <value>ATtiny45-20PU</value>
-      <footprint>Package_DIP:DIP-8_W7.62mm</footprint>
+      <footprint>Housings_DIP:DIP-8_W7.62mm_Socket</footprint>
       <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf</datasheet>
       <libsource lib="MCU_Microchip_ATtiny" part="ATtiny45-20PU" description="20MHz, 4kB Flash, 256B SRAM, 256B EEPROM, debugWIRE, DIP-8"/>
       <sheetpath names="/" tstamps="/"/>
@@ -29,6 +29,7 @@
     </comp>
     <comp ref="SW1">
       <value>SW_Push</value>
+      <footprint>footprints:push_button</footprint>
       <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BDF6B40</tstamp>
@@ -42,7 +43,7 @@
         <field name="MPN">RMCF0805JT200RCT-ND</field>
         <field name="PurchasingLink">https://www.digikey.com/products/en?keywords=RMCF0805JT200RCT-ND</field>
       </fields>
-      <libsource lib="formula" part="R_200" description=""/>
+      <libsource lib="beacon-rescue" part="R_200-formula" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BDF762D</tstamp>
     </comp>
@@ -55,12 +56,13 @@
         <field name="MPN">CRS0805-FX-1002ELFCT-ND</field>
         <field name="PurchasingLink">https://www.digikey.com/products/en?keywords=CRS0805-FX-1002ELFCT-ND</field>
       </fields>
-      <libsource lib="formula" part="R_10K" description=""/>
+      <libsource lib="beacon-rescue" part="R_10K-formula" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BDF8DC0</tstamp>
     </comp>
     <comp ref="J1">
       <value>Conn_01x03_Female</value>
+      <footprint>footprints:Connector</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="Conn_01x03_Female" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
@@ -75,7 +77,7 @@
         <field name="MPN">478-3352-1-ND</field>
         <field name="PurchasingLink">https://www.digikey.com/products/en?keywords=478-3352-1-ND</field>
       </fields>
-      <libsource lib="formula" part="C_0.1uF" description="Capacitor, 0.1uF, 50V, 5%, 0805"/>
+      <libsource lib="beacon-rescue" part="C_0.1uF-formula" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5BDFAE6F</tstamp>
     </comp>
@@ -137,8 +139,7 @@
         <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="formula" part="C_0.1uF">
-      <description>Capacitor, 0.1uF, 50V, 5%, 0805</description>
+    <libpart lib="beacon-rescue" part="C_0.1uF-formula">
       <footprints>
         <fp>C?</fp>
         <fp>C_????_*</fp>
@@ -148,7 +149,7 @@
       </footprints>
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">C_0.1uF</field>
+        <field name="Value">C_0.1uF-formula</field>
         <field name="Footprint">footprints:C_0805_OEM</field>
         <field name="Datasheet">http://datasheets.avx.com/X7RDielectric.pdf</field>
         <field name="MFN">DK</field>
@@ -160,14 +161,14 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="formula" part="R_10K">
+    <libpart lib="beacon-rescue" part="R_10K-formula">
       <footprints>
         <fp>R_*</fp>
         <fp>Resistor_*</fp>
       </footprints>
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">R_10K</field>
+        <field name="Value">R_10K-formula</field>
         <field name="Footprint">footprints:R_0805_OEM</field>
         <field name="Datasheet">http://www.bourns.com/data/global/pdfs/CRS.pdf</field>
         <field name="MFN">DK</field>
@@ -179,14 +180,14 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="formula" part="R_200">
+    <libpart lib="beacon-rescue" part="R_200-formula">
       <footprints>
         <fp>R_*</fp>
         <fp>Resistor_*</fp>
       </footprints>
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">R_200</field>
+        <field name="Value">R_200-formula</field>
         <field name="Footprint">footprints:R_0805_OEM</field>
         <field name="Datasheet">https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf</field>
         <field name="MFN">DK</field>
@@ -201,16 +202,16 @@
   </libparts>
   <libraries>
     <library logical="Connector">
-      <uri>/usr/share/kicad/library/Connector.lib</uri>
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector.lib</uri>
     </library>
     <library logical="MCU_Microchip_ATtiny">
-      <uri>/usr/share/kicad/library/MCU_Microchip_ATtiny.lib</uri>
+      <uri>C:\Program Files\KiCad\share\kicad\library/MCU_Microchip_ATtiny.lib</uri>
     </library>
     <library logical="Switch">
-      <uri>/usr/share/kicad/library/Switch.lib</uri>
+      <uri>C:\Program Files\KiCad\share\kicad\library/Switch.lib</uri>
     </library>
-    <library logical="formula">
-      <uri>/home/utsav22g/Olin Stuff/Formula/OEM_Preferred_Parts/schematic/formula.lib</uri>
+    <library logical="beacon-rescue">
+      <uri>D:\Linux\home\Olin Stuff\CrabBots\beacon/beacon-rescue.lib</uri>
     </library>
   </libraries>
   <nets>

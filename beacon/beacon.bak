@@ -20,7 +20,7 @@ U 1 1 5BDF6537
 P 4950 3650
 F 0 "U1" H 4600 4200 50  0000 R CNN
 F 1 "ATtiny45-20PU" V 4350 3900 50  0000 R CNN
-F 2 "Housings_DIP:DIP-4_W7.62mm_Socket" H 4950 3650 50  0001 C CIN
+F 2 "Housings_DIP:DIP-8_W7.62mm_Socket" H 4950 3650 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 4950 3650 50  0001 C CNN
 	1    4950 3650
 	1    0    0    -1  
@@ -125,7 +125,7 @@ Connection ~ 2600 3700
 Text Label 5550 3550 0    50   ~ 0
 PB2
 $Comp
-L formula:R_10K R1
+L beacon-rescue:R_10K-formula R1
 U 1 1 5BDF8DC0
 P 2600 3900
 F 0 "R1" H 2670 3946 50  0000 L CNN

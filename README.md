@@ -1,5 +1,5 @@
 # CrabBots
-### Small robots that use colored light to interact with other Bots and the environment to perform complex interactions. 
+### Small robots that use colored light to interact with other robots and the environment to perform complex interactions. 
 
 ## Overview
 To learn more about our project, visit our ![website!](http://poe.olin.edu/2018/crabworks/)

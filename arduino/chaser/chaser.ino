@@ -250,8 +250,8 @@ int ReadPhotodiodes() {
     left2red = 50 + (sens*diff_red_right);
     right2red = 50 + (sens*diff_red_right);
   } else {
-    left2red = 0;
-    right2red = 0;
+    left2red = 40;
+    right2red = 40;
   }
 
   if(diff_blue_right >= 5) {

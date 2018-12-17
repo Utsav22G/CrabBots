@@ -93,6 +93,7 @@ float right_total = 0;
 
 float sens = 2;
 float scale = 1;
+int bluesum;
 
 // ---------------------
 // DEFINE VARIABLES FOR
@@ -172,12 +173,13 @@ void loop() {
   lis.read();      // get X Y and Z data at once
   sensors_event_t event; 
   lis.getEvent(&event);
-  
-  if(abs(event.acceleration.z) > 20) {
+
+  bluesum = diff_blue_front + diff_blue_right + diff_blue_left + diff_blue_back;
+  if(abs(event.acceleration.z) > 10) {
     if (bump){
       bump = false;
     }
-    else{
+    else if(!bump && bluesum >= 7) {
       bump = true;
     }
   }
@@ -316,8 +318,8 @@ int ReadPhotodiodes() {
   digitalWrite(MUX1, LOW);
   delay(mux_delay);
   //curr_red_back = analogRead(RED);
-  curr_blue_back = analogRead(BLUE);;
-   right_total = scale*(right1 + right2 + right3 + right4)
+  curr_blue_back = analogRead(BLUE);
+  right_total = scale*(right1 + right2 + right3 + right4);
 
   //diff_red_back = curr_red_back - init_red_back;
   diff_blue_back = curr_blue_back - init_blue_back;
